@@ -9,7 +9,8 @@ start() ->
 
 run() ->
     Id = "embedded",
-    GconfList = [{id, Id}],
+
+    GconfList = [{id, Id},{trace,true}],
     Docroot = "/tmp",
     SconfList = [
                  {port, 8888},
@@ -19,7 +20,7 @@ run() ->
                  {revproxy,[
                             {"/revtest",
                              #url{scheme="http",
-                                  host="127.0.0.1",
+                                  host="209.85.229.99",
                                   port=80}}
                            ]}
                 ],
